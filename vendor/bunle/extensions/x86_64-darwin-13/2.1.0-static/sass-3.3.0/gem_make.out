@@ -1,0 +1,7 @@
+/Users/CEO/.rbenv/versions/2.1.1/bin/ruby mkrf_conf.rb 
+Ensuring you have the right version of listen installed.
+Installing listen >= 1.1.0, < 3.0.0
+Building native extensions.  This could take a while...
+Building native extensions.  This could take a while...
+
+/Users/CEO/.rbenv/versions/2.1.1/bin/ruby -rubygems /Users/CEO/etsydemo/vendor/bunle/gems/rake-10.1.1/bin/rake RUBYARCHDIR=/Users/CEO/etsydemo/vendor/bunle/extensions/x86_64-darwin-13/2.1.0-static/sass-3.3.0 RUBYLIBDIR=/Users/CEO/etsydemo/vendor/bunle/extensions/x86_64-darwin-13/2.1.0-static/sass-3.3.0

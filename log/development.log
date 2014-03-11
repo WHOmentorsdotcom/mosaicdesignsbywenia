@@ -1,0 +1,287 @@
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (32.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateListings (20140310053632)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "listings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "price" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140310053632"]]
+  [1m[36m (111.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddAttachmentImageToListings (20140310083020)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "listings" ADD "image_file_name" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "listings" ADD "image_content_type" varchar(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "listings" ADD "image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "listings" ADD "image_updated_at" datetime
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140310083020"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-11 09:38:47 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"
+  Rendered listings/index.html.erb within layouts/application (2.8ms)
+Warning. Error encountered while saving cache fc232c1797d16639f33e7875b043dbe2fc69078b/custom.css.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache d4870efddbbc3cd03411f391192fc986cf24ca11/bootstrap.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_variables.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_mixins.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_normalize.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_print.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_scaffolding.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_type.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_code.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_grid.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_tables.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_forms.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_buttons.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_component-animations.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_glyphicons.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_dropdowns.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_button-groups.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_input-groups.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_navs.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_navbar.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_pagination.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_pager.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_labels.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_badges.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_jumbotron.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_thumbnails.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_alerts.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_progress-bars.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_media.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_list-group.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_panels.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_wells.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_close.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_modals.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_tooltip.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_popovers.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_carousel.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_utilities.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache 3f6be043b05bf7d4718d6d6f9e89451062a8b2da/_responsive-utilities.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache fc232c1797d16639f33e7875b043dbe2fc69078b/listings.css.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache fc232c1797d16639f33e7875b043dbe2fc69078b/pages.css.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+Warning. Error encountered while saving cache fc232c1797d16639f33e7875b043dbe2fc69078b/scaffolds.css.scssc: can't dump anonymous class #<Class:0x007fa92c174198>
+
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4384ms (Views: 4369.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-03-11 09:38:52 -0700
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2014-03-11 09:39:06 -0700
+Processing by ListingsController#new as HTML
+  Rendered listings/_form.html.erb (26.6ms)
+  Rendered listings/new.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listings" for 127.0.0.1 at 2014-03-11 09:39:14 -0700
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-11 09:48:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"
+  Rendered listings/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 657ms (Views: 619.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-11 09:48:04 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-03-11 09:48:04 -0700
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-11 09:48:05 -0700
